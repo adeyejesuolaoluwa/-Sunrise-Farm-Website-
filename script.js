@@ -10,6 +10,53 @@ const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
 // =====================================================
+// DYNAMIC PRICING - INCREASES EVERY 5 MONTHS (NIGERIAN NAIRA)
+// ===================================================== 
+
+const updateDynamicPrices = () => {
+    // Reference date: January 1, 2024 (start date for price tracking)
+    const referenceDate = new Date('2024-01-01');
+    const currentDate = new Date();
+    
+    // Calculate months difference
+    let monthsDiff = (currentDate.getFullYear() - referenceDate.getFullYear()) * 12;
+    monthsDiff += currentDate.getMonth() - referenceDate.getMonth();
+    
+    // Calculate how many 5-month periods have passed
+    const priceIncrementPeriods = Math.floor(monthsDiff / 5);
+    
+    // Price increase: 5% per 5-month period
+    const priceMultiplier = Math.pow(1.05, priceIncrementPeriods);
+    
+    // Update all prices
+    const priceElements = document.querySelectorAll('.price[data-base-price]');
+    priceElements.forEach(priceEl => {
+        const basePrice = parseInt(priceEl.getAttribute('data-base-price'));
+        const currentPrice = Math.round(basePrice * priceMultiplier);
+        
+        // Format price text
+        const priceUnitSpan = priceEl.querySelector('.price-unit');
+        priceEl.textContent = '₦' + currentPrice.toLocaleString('en-US');
+        if (priceUnitSpan) {
+            priceEl.appendChild(priceUnitSpan);
+        }
+        
+        // Store current price for reference
+        priceEl.setAttribute('data-current-price', currentPrice);
+    });
+    
+    // Log pricing info
+    console.log(`📊 Dynamic Pricing Updated: ${priceIncrementPeriods} price increase periods passed. Multiplier: ${priceMultiplier.toFixed(3)}x`);
+};
+
+// Call on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateDynamicPrices);
+} else {
+    updateDynamicPrices();
+}
+
+// =====================================================
 // MOBILE MENU TOGGLE
 // =====================================================
 
@@ -424,6 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     console.log('🌅 Sunrise Farm Website loaded successfully!');
+    console.log('💱 Dynamic Nigerian Naira pricing active - prices increase 5% every 5 months');
 });
 
 // =====================================================
