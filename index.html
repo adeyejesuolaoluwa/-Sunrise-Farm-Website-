@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Farm - Fresh, Healthy, and Naturally Raised</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌅</span>
+                <span class="logo-text">Sunrise Farm</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#animals" class="nav-link">Our Animals</a></li>
+                <li><a href="#health" class="nav-link">Animal Care</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Sunrise Farm</h1>
+            <p class="hero-slogan">Fresh, Healthy, and Naturally Raised</p>
+            <p class="hero-subtitle">Experience premium quality poultry products from our family farm</p>
+            <button class="cta-button" onclick="document.getElementById('animals').scrollIntoView({behavior: 'smooth'})">Explore Our Farm</button>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Sunrise Farm</h2>
+                <div class="header-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Welcome to Sunrise Farm, where tradition meets modern farming excellence. For over 20 years, we've dedicated ourselves to raising the healthiest, most nutritious poultry through ethical and sustainable practices.
+                    </p>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🌱</div>
+                            <h3>Sustainable</h3>
+                            <p>Eco-friendly farming practices that respect nature</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">❤️</div>
+                            <h3>Care-Focused</h3>
+                            <p>Every animal receives personal attention and premium nutrition</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">⭐</div>
+                            <h3>Quality First</h3>
+                            <p>Rigorous standards ensure only the best products reach your table</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder farm-image">
+                        <span>🚜 Farm Environment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="20">0</div>
+                    <p class="stat-label">Years in Business</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="5000">0</div>
+                    <p class="stat-label">Happy Customers</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="15000">0</div>
+                    <p class="stat-label">Birds Raised</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <p class="stat-label">% Natural Feed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animals/Products Section -->
+    <section id="animals" class="animals">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Animals</h2>
+                <p class="section-description">Premium poultry raised with care and dedication</p>
+                <div class="header-underline"></div>
+            </div>
+            <div class="animals-grid">
+                <!-- Turkey Card -->
+                <div class="animal-card">
+                    <div class="animal-image-wrapper">
+                        <div class="animal-image turkey-image">
+                            <span>🦃</span>
+                        </div>
+                        <div class="animal-badge">Premium Quality</div>
+                    </div>
+                    <div class="animal-info">
+                        <h3>Heritage Turkeys</h3>
+                        <p class="animal-description">
+                            Our heritage turkeys are raised outdoor year-round on pasture. They're healthier, more flavorful, and packed with nutrients compared to conventional poultry.
+                        </p>
+                        <div class="animal-features">
+                            <span class="feature">🏃 Free-range</span>
+                            <span class="feature">🌾 Organic feed</span>
+                            <span class="feature">💪 High protein</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">$20<span class="price-unit">/lb</span></span>
+                        </div>
+                        <button class="buy-button" onclick="contactForm('Turkey')">Contact for Order</button>
+                    </div>
+                </div>
+
+                <!-- Chicken Card -->
+                <div class="animal-card">
+                    <div class="animal-image-wrapper">
+                        <div class="animal-image chicken-image">
+                            <span>🐔</span>
+                        </div>
+                        <div class="animal-badge">Best Seller</div>
+                    </div>
+                    <div class="animal-info">
+                        <h3>Premium Chickens</h3>
+                        <p class="animal-description">
+                            Locally raised chickens with access to spacious outdoor runs. Our birds produce eggs rich in omega-3s and meat that's tender and delicious.
+                        </p>
+                        <div class="animal-features">
+                            <span class="feature">🥚 Daily fresh eggs</span>
+                            <span class="feature">🌿 Pasture-fed</span>
+                            <span class="feature">💚 Hormone-free</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="price">$20<span class="price-unit">/lb</span></span>
+                        </div>
+                        <button class="buy-button" onclick="contactForm('Chicken')">Contact for Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animal Health & Care Section -->
+    <section id="health" class="health-care">
+        <div class="container">
+            <div class="section-header">
+                <h2>Animal Health & Care</h2>
+                <p class="section-description">Expert guidance on poultry health and wellness</p>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="health-content">
+                <!-- Common Illnesses -->
+                <div class="health-section">
+                    <h3 class="subsection-title">Common Poultry Illnesses</h3>
+                    <div class="illness-grid">
+                        <div class="illness-card">
+                            <div class="illness-icon">🦠</div>
+                            <h4>Coccidiosis</h4>
+                            <p class="illness-description">A parasitic disease affecting the intestines</p>
+                            <p class="illness-symptoms"><strong>Symptoms:</strong> Blood in stool, weight loss, lethargy</p>
+                            <p class="illness-treatment"><strong>Treatment:</strong> Coccidiostats or amprolium</p>
+                        </div>
+                        <div class="illness-card">
+                            <div class="illness-icon">🤧</div>
+                            <h4>Newcastle Disease</h4>
+                            <p class="illness-description">A highly contagious viral infection</p>
+                            <p class="illness-symptoms"><strong>Symptoms:</strong> Respiratory issues, neurological signs</p>
+                            <p class="illness-treatment"><strong>Treatment:</strong> Vaccination (prevention), supportive care</p>
+                        </div>
+                        <div class="illness-card">
+                            <div class="illness-icon">🦗</div>
+                            <h4>Worm Infestation</h4>
+                            <p class="illness-description">Internal parasites affecting nutrient absorption</p>
+                            <p class="illness-symptoms"><strong>Symptoms:</strong> Poor growth, dull feathers, weakness</p>
+                            <p class="illness-treatment"><strong>Treatment:</strong> Anthelmintics (deworming agents)</p>
+                        </div>
+                        <div class="illness-card">
+                            <div class="illness-icon">🔥</div>
+                            <h4>Fowl Pox</h4>
+                            <p class="illness-description">A viral disease causing skin lesions</p>
+                            <p class="illness-symptoms"><strong>Symptoms:</strong> Scabs on skin, reduced egg production</p>
+                            <p class="illness-treatment"><strong>Treatment:</strong> Vaccination (prevention), isolation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medications & Treatments -->
+                <div class="health-section">
+                    <h3 class="subsection-title">Medications & Treatments</h3>
+                    <div class="medications-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Medication</th>
+                                    <th>Type</th>
+                                    <th>Purpose</th>
+                                    <th>Usage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Tetracycline</strong></td>
+                                    <td>Antibiotic</td>
+                                    <td>Bacterial infections</td>
+                                    <td>Oral or injectable</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Amprolium</strong></td>
+                                    <td>Anticoccidial</td>
+                                    <td>Coccidiosis prevention/treatment</td>
+                                    <td>Water-soluble</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Levamisole</strong></td>
+                                    <td>Anthelmintic</td>
+                                    <td>Internal worm parasites</td>
+                                    <td>Oral or injectable</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vitamin Supplements</strong></td>
+                                    <td>Supplement</td>
+                                    <td>Immune system support</td>
+                                    <td>Water or feed additive</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Newcastle Vaccine</strong></td>
+                                    <td>Vaccine</td>
+                                    <td>Newcastle disease prevention</td>
+                                    <td>Injectable or oral</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Marek's Vaccine</strong></td>
+                                    <td>Vaccine</td>
+                                    <td>Marek's disease prevention</td>
+                                    <td>Day-old injection</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Safety Notice -->
+                <div class="safety-notice">
+                    <div class="notice-icon">⚠️</div>
+                    <div class="notice-content">
+                        <h4>Important Safety Information</h4>
+                        <p><strong>Always consult a licensed veterinarian before administering any medications or treatments to your poultry.</strong></p>
+                        <p>Improper use of medications can lead to resistance, residues in meat/eggs, and harm to animal welfare. Our team recommends regular veterinary checkups and preventive care practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p class="section-description">Complete solutions for your poultry needs</p>
+                <div class="header-underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Farm Delivery</h3>
+                    <p>Fresh poultry delivered directly to your doorstep within 24 hours of order. Temperature-controlled packaging ensures quality.</p>
+                    <ul class="service-features">
+                        <li>✓ Same-day delivery available</li>
+                        <li>✓ Free delivery on orders $100+</li>
+                        <li>✓ Insulated, eco-friendly packaging</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Poultry Care Guidance</h3>
+                    <p>Expert advice on raising healthy poultry, nutrition plans, housing setups, and seasonal care strategies from our experienced team.</p>
+                    <ul class="service-features">
+                        <li>✓ Free consultation calls</li>
+                        <li>✓ Comprehensive care guides</li>
+                        <li>✓ Email support available</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Bulk Orders</h3>
+                    <p>Special pricing and arrangements for restaurants, catering businesses, and bulk buyers. Custom orders tailored to your needs.</p>
+                    <ul class="service-features">
+                        <li>✓ Volume discounts (10%+)</li>
+                        <li>✓ Flexible delivery schedules</li>
+                        <li>✓ Custom specifications available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <div class="header-underline"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "The quality of Sunrise Farm's poultry is exceptional. We've noticed the difference in taste and nutritional value compared to store-bought chicken. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Chef & Food Enthusiast</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Their customer service is outstanding. They answered all my questions about poultry care and health. Fair prices and fast delivery!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Michael Chen</strong>
+                        <span>Restaurant Owner</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Supporting local farms has never been easier. Sunrise Farm is committed to sustainable practices. My family loves their products!"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Emma Davis</strong>
+                        <span>Sustainability Advocate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p class="section-description">Have questions? We'd love to hear from you</p>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                        <p class="info-detail">Mon-Fri: 8am-6pm EST</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@sunrisefarm.com">info@sunrisefarm.com</a></p>
+                        <p class="info-detail">We respond within 24 hours</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Location</h3>
+                        <p>123 Sunrise Valley Road</p>
+                        <p class="info-detail">Green Hills, PA 17601</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Product Interest</label>
+                        <select id="product" name="product">
+                            <option value="">Select a product</option>
+                            <option value="Turkey">Heritage Turkeys</option>
+                            <option value="Chicken">Premium Chickens</option>
+                            <option value="Bulk">Bulk Order</option>
+                            <option value="Other">Other Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                    <p class="form-message" id="formMessage"></p>
+                </form>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-icon">🗺️</div>
+                    <p>Farm Location Map</p>
+                    <small>123 Sunrise Valley Road, Green Hills, PA 17601</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sunrise Farm</h4>
+                    <p>Premium poultry products raised with care and dedication since 2006.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Facebook">f</a>
+                        <a href="#" class="social-icon" title="Instagram">📷</a>
+                        <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                        <a href="#" class="social-icon" title="Email">✉️</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#animals">Our Animals</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#health">Animal Care</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with farm news and special offers</p>
+                    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sunrise Farm. All rights reserved. | Proudly serving the community with premium poultry since 2006.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
