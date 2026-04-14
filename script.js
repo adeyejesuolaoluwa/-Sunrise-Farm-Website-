@@ -28,7 +28,7 @@ const updateDynamicPrices = () => {
     // Price increase: 5% per 5-month period
     const priceMultiplier = Math.pow(1.05, priceIncrementPeriods);
     
-    // Update all prices
+    // Update all Naira prices
     const priceElements = document.querySelectorAll('.price[data-base-price]');
     priceElements.forEach(priceEl => {
         const basePrice = parseInt(priceEl.getAttribute('data-base-price'));
@@ -37,6 +37,23 @@ const updateDynamicPrices = () => {
         // Format price text
         const priceUnitSpan = priceEl.querySelector('.price-unit');
         priceEl.textContent = '₦' + currentPrice.toLocaleString('en-US');
+        if (priceUnitSpan) {
+            priceEl.appendChild(priceUnitSpan);
+        }
+        
+        // Store current price for reference
+        priceEl.setAttribute('data-current-price', currentPrice);
+    });
+    
+    // Update all USD prices
+    const usdElements = document.querySelectorAll('.price-usd[data-base-price-usd]');
+    usdElements.forEach(priceEl => {
+        const basePrice = parseFloat(priceEl.getAttribute('data-base-price-usd'));
+        const currentPrice = (basePrice * priceMultiplier).toFixed(2);
+        
+        // Format price text
+        const priceUnitSpan = priceEl.querySelector('.price-unit');
+        priceEl.textContent = '$' + currentPrice;
         if (priceUnitSpan) {
             priceEl.appendChild(priceUnitSpan);
         }

@@ -638,6 +638,16 @@ body {
     color: var(--primary-orange);
     font-weight: 700;
     font-family: 'Playfair Display', serif;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.price-usd {
+    font-size: 1.8rem;
+    color: var(--light-green);
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    display: block;
 }
 
 .price-unit {
